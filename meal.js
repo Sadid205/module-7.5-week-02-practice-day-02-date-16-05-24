@@ -24,7 +24,6 @@ const showAllProducts = (data)=>{
     data.forEach((item)=>{
         const div = document.createElement("div");
         const prd_list = document.getElementById("prd_list");
-        prd_list.innerHTML = " ";
         div.classList.add("items_div");
         div.classList.add("col-md-3");
         div.classList.add("m-2");
@@ -56,7 +55,10 @@ const getAllProduct = ()=>{
                 <h1 class="text-center fw-bold">This item is not available at this moment</h1>
             `
         }else{
+            const prd_list = document.getElementById("prd_list");
+            prd_list.innerHTML = " ";
             showAllProducts(data.meals);
+
         }
       
     })
